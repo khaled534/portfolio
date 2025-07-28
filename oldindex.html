@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khaled Douadi – R&D Antenna & RF Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+  /* ─── Theme & Reset ─────────────────────────── */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0f172a;        --bg-alt:#1e293b;
+    --text:#f1f5f9;      --primary:#3b82f6;
+    --accent:#facc15;    --radius:0.8rem;
+    --max:1150px;        --tr:0.3s ease-in-out;
+  }
+  body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  a{color:var(--primary);text-decoration:none;transition:var(--tr)}
+  a:hover{color:var(--accent)}
+  header{position:sticky;top:0;z-index:20;background:rgba(15,23,42,0.9);backdrop-filter:blur(7px)}
+  nav{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem}
+  nav ul{list-style:none;display:flex;gap:1.2rem;font-size:0.95rem}
+  nav li a{font-weight:300}
+  .brand{font-weight:600;color:var(--accent)}
+  /* ─── Sections ──────────────────────────────── */
+  section{padding:4.5rem 1.2rem;max-width:var(--max);margin:auto}
+  h2{font-size:2rem;margin-bottom:1.3rem;position:relative}
+  h2::after{content:"";position:absolute;bottom:-0.5rem;left:0;width:3rem;height:3px;background:var(--primary)}
+  /* ─── Hero ──────────────────────────────────── */
+  .hero{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:88vh}
+  .hero h1{font-size:clamp(2.6rem,5vw,4.2rem);margin-bottom:1rem}
+  .hero p{opacity:0.85;font-size:1.15rem;max-width:45ch}
+  .btn{display:inline-block;margin-top:2rem;padding:0.85rem 2.2rem;border:2px solid var(--primary);border-radius:var(--radius);color:var(--text);transition:var(--tr);font-weight:600}
+  .btn:hover{background:var(--primary);color:var(--bg);transform:translateY(-2px)}
+  /* ─── Grids & Cards ─────────────────────────── */
+  .grid{display:grid;gap:2.2rem}
+  .two{grid-template-columns:1fr 1fr}
+  img{width:100%;border-radius:var(--radius)}
+  .card{background:var(--bg-alt);padding:1.6rem;border-radius:var(--radius);transition:var(--tr)}
+  .card:hover{transform:translateY(-4px)}
+  /* clickable card wrapper */
+  .card-link{display:block;color:inherit}
+  /* ─── Timeline ──────────────────────────────── */
+  .timeline{position:relative;padding-left:2rem}        /* extra room for bullet */
+  .timeline::before{content:"";position:absolute;left:0.5rem;top:0;width:3px;height:100%;background:var(--primary)}
+  .tl-item{margin-bottom:2rem;position:relative;padding-left:1.5rem}
+  .tl-item::before{
+      content:"";position:absolute;left:0;top:0.55rem;   /* avoids text overlap */
+      width:0.9rem;height:0.9rem;border-radius:50%;
+      background:var(--accent);border:2px solid var(--primary)
+  }
+  .tl-item h3{font-size:1.1rem;margin-bottom:0.3rem}
+  .tl-item span{opacity:0.75;font-size:0.9rem}
+  /* ─── Footer ────────────────────────────────── */
+  footer{text-align:center;padding:2rem 1rem;background:#0e1628;font-size:0.85rem}
+  @media(max-width:880px){.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- ────────── NAV ────────── -->
+<header>
+  <nav>
+    <div class="brand">Khaled Douadi</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ────────── HERO ────────── -->
+<section class="hero">
+  <h1>R&D Antenna Engineer&nbsp;| RF & Wireless Systems</h1>
+  <p>Bridging electromagnetic theory, numerical simulation, and hands‑on measurements to craft reliable wireless solutions—learning something new every day.</p>
+  <a href="https://drive.google.com/file/d/1z6c3yG-6vvh8-XSOSZQdpDo6rTEryAQw/view?usp=sharing" class="btn" target="_blank">Download&nbsp;CV&nbsp;↗</a>
+</section>
+
+<!-- ────────── ABOUT ────────── -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="grid two">
+    <div>
+      <p>I’m a telecom‑engineering master’s student (<strong><a href="https://www.sorbonne-universite.fr/en" target="_blank">Sorbonne University</a></strong>) turned RF problem‑solver. My toolkit spans:</p>
+      <ul>
+        <li>✓ Anechoic‑chamber measurements & electromagnetic material testing</li>
+        <li>✓ RF bench gear: VNA, Spectrum Analyzer, Rohde & Schwarz CMW500, Simpulse modules</li>
+        <li>✓ Numerical simulations: MoM, FDTD, beam‑forming (MATLAB)</li>
+        <li>✓ Python & Bash automation to eliminate repetitive tests</li>
+      </ul>
+      <p>Outside the lab you’ll find me designing 3‑D scenes in Blender, building small games, or shipping this very site—because if it looks interesting and useful, I’ll learn it.</p>
+      <a href="#contact" class="btn">Let’s Connect</a>
+    </div>
+    <img src="intro.png" alt="Profile illustration">
+  </div>
+</section>
+
+<!-- ────────── EXPERIENCE & EDUCATION ────────── -->
+<section id="experience">
+  <h2>Timeline</h2>
+  <div class="timeline">
+
+    <!-- Internship -->
+    <div class="tl-item">
+      <h3><a href="parrot.html">RF Engineer Intern – Parrot Drones</a></h3>
+      <span>Feb 2025 – Aug 2025 · Paris, FR</span>
+      <p>Designed & validated embedded RF hardware, automated measurement workflows with Python + ADB, and drove compliance testing across VNA, Spectrum Analyzer, and CMW500 setups.</p>
+    </div>
+
+    <!-- Current MSc -->
+    <div class="tl-item">
+      <h3><a href="https://sciences.sorbonne-universite.fr/formation-sciences/offre-de-formation/masters/master-electronique-energie-electrique-automatique-2" target="_blank">MSc Communication Systems – Sorbonne University</a></h3>
+      <span>2023 – 2025</span>
+      <p>Specialised in antenna and microwave engineering, radar systems, embedded Linux, and 5G technologies.</p>
+    </div>
+
+    <!-- BS Lille -->
+    <div class="tl-item">
+      <h3><a href="https://licence-eea.univ-lille.fr/formation/l3/parcours-ie" target="_blank">BSc Electrical Engineering – Lille University</a></h3>
+      <span>2022 – 2023</span>
+      <p>Focused on electronics, signal processing, and control systems.</p>
+    </div>
+
+    <!-- Licence INELEC -->
+    <div class="tl-item">
+      <h3><a href="https://igee.univ-boumerdes.dz/Presentation.html" target="_blank">Licence Electronics – IGEE (Ex‑INELEC), Algeria</a></h3>
+      <span>2019 – 2022</span>
+      <p>Core curriculum in electronics, electromagnetics, and embedded systems.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ────────── SKILLS ────────── -->
+<section id="skills">
+  <h2>Skills Snapshot</h2>
+  <div class="grid two">
+    <div class="card"><h3>Antenna & RF Design</h3><p>MoM / FDTD modelling, beam‑forming, impedance matching, anechoic‑chamber testing.</p></div>
+    <div class="card"><h3>Measurement Automation</h3><p>Python, MATLAB, Shell; instrument control (SCPI/USB/TCP), data pipelines, Git workflows.</p></div>
+    <div class="card"><h3>Embedded & Linux</h3><p>Kernel builds, cross‑compilation, VHDL on Basys3, C on micro‑targets, Makefiles.</p></div>
+    <div class="card"><h3>Soft & Languages</h3><p>English C1 · French C1 · Arabic (native) · collaboration, adaptability, project leadership.</p></div>
+  </div>
+</section>
+
+<!-- ────────── PROJECTS ────────── -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid two">
+
+    <a class="card-link" href="5G_Beamforming.pdf" target="_blank">
+      <div class="card">
+        <h3>5G Beam‑forming Simulator</h3>
+        <p>Modelled MRT & AoA techniques, compared SISO vs MISO BER across SNRs in MATLAB.</p>
+      </div>
+    </a>
+
+    <a class="card-link" href="Antenna_Suite.pdf" target="_blank">
+      <div class="card">
+        <h3>Electromagnetic Antenna Suite</h3>
+        <p>Analyzed radiation patterns & near/far‑field distributions using custom MoM/FDTD modules.</p>
+      </div>
+    </a>
+
+    <a class="card-link" href="RF_Test_Automation.pdf" target="_blank">
+      <div class="card">
+        <h3>RF Test Automation Framework</h3>
+        <p>Unified VNA & power‑generator control via Python; cut test time by &gt;50 % for drone radios.</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ────────── CONTACT ────────── -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>📧 <a href="mailto:douadikhaled71@gmail.com">douadikhaled71@gmail.com</a></p>
+  <p>🔗 <a href="https://www.linkedin.com/in/khaled-douadi-712164250/" target="_blank">LinkedIn ↗</a></p>
+</section>
+
+<!-- ────────── FOOTER ────────── -->
+<footer>
+  &copy; <span id="year"></span> Khaled Douadi · Built with curiosity & code
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
