@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Khaled Douadi – R&D Antenna & RF Engineer</title>
 
-<!-- Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -41,11 +40,17 @@
   img{width:100%;border-radius:var(--radius)}
   .card{background:var(--bg-alt);padding:1.6rem;border-radius:var(--radius);transition:var(--tr)}
   .card:hover{transform:translateY(-4px)}
+  /* clickable card wrapper */
+  .card-link{display:block;color:inherit}
   /* ─── Timeline ──────────────────────────────── */
-  .timeline{position:relative;padding-left:1.4rem}
-  .timeline::before{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:var(--primary)}
-  .tl-item{margin-bottom:2rem;position:relative}
-  .tl-item::before{content:"";position:absolute;left:-0.5rem;top:0;width:1rem;height:1rem;border-radius:50%;background:var(--accent);border:2px solid var(--primary)}
+  .timeline{position:relative;padding-left:2rem}        /* extra room for bullet */
+  .timeline::before{content:"";position:absolute;left:0.5rem;top:0;width:3px;height:100%;background:var(--primary)}
+  .tl-item{margin-bottom:2rem;position:relative;padding-left:1.5rem}
+  .tl-item::before{
+      content:"";position:absolute;left:0;top:0.55rem;   /* avoids text overlap */
+      width:0.9rem;height:0.9rem;border-radius:50%;
+      background:var(--accent);border:2px solid var(--primary)
+  }
   .tl-item h3{font-size:1.1rem;margin-bottom:0.3rem}
   .tl-item span{opacity:0.75;font-size:0.9rem}
   /* ─── Footer ────────────────────────────────── */
@@ -81,7 +86,7 @@
   <h2>About Me</h2>
   <div class="grid two">
     <div>
-      <p>I’m a telecom‑engineering master’s student (Sorbonne U.) turned RF problem‑solver. My toolkit spans:</p>
+      <p>I’m a telecom‑engineering master’s student (<strong><a href="https://www.sorbonne-universite.fr/en" target="_blank">Sorbonne University</a></strong>) turned RF problem‑solver. My toolkit spans:</p>
       <ul>
         <li>✓ Anechoic‑chamber measurements & electromagnetic material testing</li>
         <li>✓ RF bench gear: VNA, Spectrum Analyzer, Rohde & Schwarz CMW500, Simpulse modules</li>
@@ -102,24 +107,32 @@
 
     <!-- Internship -->
     <div class="tl-item">
-      <h3>RF Engineer Intern – Parrot Drones</h3>
+      <h3><a href="parrot.html">RF Engineer Intern – Parrot Drones</a></h3>
       <span>Feb 2025 – Aug 2025 · Paris, FR</span>
       <p>Designed & validated embedded RF hardware, automated measurement workflows with Python + ADB, and drove compliance testing across VNA, Spectrum Analyzer, and CMW500 setups.</p>
     </div>
 
     <!-- Current MSc -->
     <div class="tl-item">
-      <h3>MSc Communication Systems – Sorbonne University</h3>
+      <h3><a href="https://www.sorbonne-universite.fr/en" target="_blank">MSc Communication Systems – Sorbonne University</a></h3>
       <span>2023 – 2025</span>
       <p>Specialised in antenna and microwave engineering, radar systems, embedded Linux, and 5G technologies.</p>
     </div>
 
-    <!-- Licence -->
+    <!-- BS Lille -->
     <div class="tl-item">
-      <h3>BSc Electrical Engineering – Lille University</h3>
+      <h3><a href="https://www.univ-lille.fr/en/" target="_blank">BSc Electrical Engineering – Lille University</a></h3>
       <span>2022 – 2023</span>
       <p>Focused on electronics, signal processing, and control systems.</p>
     </div>
+
+    <!-- Licence INELEC -->
+    <div class="tl-item">
+      <h3><a href="https://igee.univ-boumerdes.dz/Presentation.html" target="_blank">Licence Electronics – IGEE (Ex‑INELEC), Algeria</a></h3>
+      <span>2019 – 2022</span>
+      <p>Core curriculum in electronics, electromagnetics, and embedded systems.</p>
+    </div>
+
   </div>
 </section>
 
@@ -127,22 +140,10 @@
 <section id="skills">
   <h2>Skills Snapshot</h2>
   <div class="grid two">
-    <div class="card">
-      <h3>Antenna & RF Design</h3>
-      <p>MoM / FDTD modelling, beam‑forming, impedance matching, anechoic‑chamber testing.</p>
-    </div>
-    <div class="card">
-      <h3>Measurement Automation</h3>
-      <p>Python, MATLAB, Shell; instrument control (SCPI/USB/TCP), data pipelines, Git workflows.</p>
-    </div>
-    <div class="card">
-      <h3>Embedded & Linux</h3>
-      <p>Kernel builds, cross‑compilation, VHDL on Basys3, C on micro‑targets, Makefiles.</p>
-    </div>
-    <div class="card">
-      <h3>Soft & Languages</h3>
-      <p>English C1 · French C1 · Arabic (native) · team collaboration, adaptability, project leadership.</p>
-    </div>
+    <div class="card"><h3>Antenna & RF Design</h3><p>MoM / FDTD modelling, beam‑forming, impedance matching, anechoic‑chamber testing.</p></div>
+    <div class="card"><h3>Measurement Automation</h3><p>Python, MATLAB, Shell; instrument control (SCPI/USB/TCP), data pipelines, Git workflows.</p></div>
+    <div class="card"><h3>Embedded & Linux</h3><p>Kernel builds, cross‑compilation, VHDL on Basys3, C on micro‑targets, Makefiles.</p></div>
+    <div class="card"><h3>Soft & Languages</h3><p>English C1 · French C1 · Arabic (native) · collaboration, adaptability, project leadership.</p></div>
   </div>
 </section>
 
@@ -151,25 +152,33 @@
   <h2>Projects</h2>
   <div class="grid two">
 
-    <div class="card">
-      <h3>5G Beam‑forming Simulator</h3>
-      <p>Modeled MRT & AoA techniques, compared SISO vs MISO BER across SNRs in MATLAB.</p>
-    </div>
+    <a class="card-link" href="5G_Beamforming.pdf" target="_blank">
+      <div class="card">
+        <h3>5G Beam‑forming Simulator</h3>
+        <p>Modelled MRT & AoA techniques, compared SISO vs MISO BER across SNRs in MATLAB.</p>
+      </div>
+    </a>
 
-    <div class="card">
-      <h3>Electromagnetic Antenna Suite</h3>
-      <p>Analyzed radiation patterns & near/far‑field distributions using custom MoM/FDTD modules.</p>
-    </div>
+    <a class="card-link" href="Antenna_Suite.pdf" target="_blank">
+      <div class="card">
+        <h3>Electromagnetic Antenna Suite</h3>
+        <p>Analyzed radiation patterns & near/far‑field distributions using custom MoM/FDTD modules.</p>
+      </div>
+    </a>
 
-    <div class="card">
-      <h3>RF Test Automation Framework</h3>
-      <p>Unified VNA & power‑generator control via Python; cut test time by >50 % for drone radios.</p>
-    </div>
+    <a class="card-link" href="RF_Test_Automation.pdf" target="_blank">
+      <div class="card">
+        <h3>RF Test Automation Framework</h3>
+        <p>Unified VNA & power‑generator control via Python; cut test time by &gt;50 % for drone radios.</p>
+      </div>
+    </a>
 
-    <div class="card">
-      <h3>Blender 3‑D Shorts</h3>
-      <p>Created stylised animations and procedural assets to visualise antenna concepts in motion.</p>
-    </div>
+    <a class="card-link" href="Blender_Shorts.pdf" target="_blank">
+      <div class="card">
+        <h3>Blender 3‑D Shorts</h3>
+        <p>Created stylised animations and procedural assets to visualise antenna concepts in motion.</p>
+      </div>
+    </a>
 
   </div>
 </section>

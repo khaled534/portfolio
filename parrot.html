@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parrot Internship – Khaled Douadi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{--bg:#0f172a;--text:#f1f5f9;--primary:#3b82f6;--accent:#facc15;--radius:0.8rem;--max:900px}
+  body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  a{color:var(--primary);text-decoration:none} a:hover{color:var(--accent)}
+  header,footer{text-align:center;padding:1.2rem}
+  main{max-width:var(--max);margin:auto;padding:2.5rem 1rem}
+  h1{font-size:2rem;margin-bottom:1rem}
+  .logo{max-width:180px;margin:1rem 0}
+  ul{margin-left:1.2rem}
+  .btn-back{display:inline-block;margin-top:2rem;padding:0.6rem 1.4rem;border:2px solid var(--primary);border-radius:var(--radius);color:var(--text)}
+  .btn-back:hover{background:var(--primary);color:var(--bg)}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="btn-back">← Back to main site</a>
+</header>
+
+<main>
+  <h1>RF Engineer Internship @ Parrot Drones</h1>
+
+  <!-- Parrot logo linking to official site -->
+  <a href="https://www.parrot.com/en" target="_blank">
+    <img src="parrot_logo.png" alt="Parrot logo" class="logo">
+  </a>
+
+  <p>During my six‑month internship in Parrot’s RF & Antenna team I:</p>
+  <ul>
+    <li><strong>Designed & validated</strong> embedded RF hardware for next‑gen drone platforms, ensuring compliance with ETSI/FCC regulations.</li>
+    <li><strong>Created & updated PCB schematics</strong> using OrCAD, iterating with mechanical and firmware teams for seamless integration.</li>
+    <li><strong>Automated measurement workflows</strong> in Python (SCPI) + Bash + ADB, cutting manual test time by > 50 %.</li>
+    <li>Configured and drove advanced instruments: <em>Vector Network Analyzer, Spectrum Analyzer, Rohde & Schwarz CMW500</em>.</li>
+    <li>Documented procedures & trained team members on the new automation framework.</li>
+  </ul>
+
+  <p class="small">Full details in my downloadable CV and reference letters on request.</p>
+
+  <a href="index.html" class="btn-back">← Back to main site</a>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Khaled Douadi
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
