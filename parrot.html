@@ -8,44 +8,136 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-  :root{--bg:#0f172a;--text:#f1f5f9;--primary:#3b82f6;--accent:#facc15;--radius:0.8rem;--max:900px}
-  body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-  a{color:var(--primary);text-decoration:none} a:hover{color:var(--accent)}
+  /* ── Theme ─────────────────────────────────────── */
+  :root{--bg:#0f172a;--bg-alt:#1e293b;--text:#f1f5f9;
+        --primary:#3b82f6;--accent:#facc15;--radius:.8rem;--max:950px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+  a{color:var(--primary);text-decoration:none;transition:.3s}
+  a:hover{color:var(--accent)}
+  h1,h2{font-weight:600}
+  /* ── Layout helpers ───────────────────────────── */
   header,footer{text-align:center;padding:1.2rem}
-  main{max-width:var(--max);margin:auto;padding:2.5rem 1rem}
-  h1{font-size:2rem;margin-bottom:1rem}
-  .logo{max-width:180px;margin:1rem 0}
-  ul{margin-left:1.2rem}
-  .btn-back{display:inline-block;margin-top:2rem;padding:0.6rem 1.4rem;border:2px solid var(--primary);border-radius:var(--radius);color:var(--text)}
-  .btn-back:hover{background:var(--primary);color:var(--bg)}
+  main{max-width:var(--max);margin:auto;padding:2.5rem 1rem;display:grid;gap:2.5rem}
+  section{display:flex;flex-direction:column;gap:1.2rem}
+  ul{margin-left:1.4rem;display:grid;gap:.4rem}
+  .btn{display:inline-block;padding:.6rem 1.4rem;border:2px solid var(--primary);border-radius:var(--radius);color:var(--text)}
+  .btn:hover{background:var(--primary);color:var(--bg)}
+  /* ── Hero ─────────────────────────────────────── */
+  .hero{background:linear-gradient(145deg,#111827 0%,var(--bg-alt) 100%);padding:3.5rem 1rem;text-align:center;border-radius:var(--radius)}
+  .hero img{max-width:220px;width:55%;height:auto;filter:drop-shadow(0 3px 8px rgba(0,0,0,.4))}
+  .hero h1{margin-top:1rem;font-size:clamp(1.8rem,4.5vw,2.6rem)}
+  .tagline{opacity:.85;font-size:1.05rem;max-width:45ch;margin:0 auto}
+  /* ── Grid cards ───────────────────────────────── */
+  .grid{display:grid;gap:1.6rem}
+  .two-col{grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+  .card{background:var(--bg-alt);padding:1.5rem;border-radius:var(--radius)}
+  .card h3{margin-bottom:.4rem;font-size:1.1rem;color:var(--accent)}
+  /* ── Timeline bullets ─────────────────────────── */
+  .timeline{position:relative;padding-left:2rem}
+  .timeline::before{content:"";position:absolute;left:.55rem;top:0;width:3px;height:100%;background:var(--primary)}
+  .tl-item{position:relative;padding-left:1.4rem;margin-bottom:1.6rem}
+  .tl-item::before{content:"";position:absolute;left:0;top:.6rem;width:.85rem;height:.85rem;border-radius:50%;background:var(--accent);border:2px solid var(--primary)}
+  .tl-item span{opacity:.8;font-size:.9rem}
 </style>
 </head>
 <body>
 
 <header>
-  <a href="index.html" class="btn-back">← Back to main site</a>
+  <a href="index.html" class="btn">← Back to main site</a>
 </header>
 
-<main>
-  <h1>RF Engineer Internship @ Parrot Drones</h1>
-
-  <!-- Parrot logo linking to official site -->
+<!-- ────────── HERO ────────── -->
+<div class="hero">
   <a href="https://www.parrot.com/en" target="_blank">
-    <img src="parrot_logo.png" alt="Parrot logo" class="logo">
+    <img src="parrot_logo.png" alt="Parrot logo">
   </a>
+  <h1>RF Engineer Internship &nbsp;|&nbsp; Parrot Drones (Feb – Aug 2025)</h1>
+  <p class="tagline">Automated four RF test benches and boosted measurement productivity by <strong>70 %</strong> for Parrot’s next‑gen professional drone platforms.</p>
+</div>
 
-  <p>During my six‑month internship in Parrot’s RF & Antenna team I:</p>
+<main>
+
+<!-- ─── Context ─── -->
+<section>
+  <h2>Company & Mission</h2>
+  <p><strong>Parrot</strong> is Europe’s leading drone manufacturer, supplying lightweight, 4K‑enabled ANAFI systems to defence, public‑safety and inspection markets. My six‑month mission inside the <em>Hardware RF</em> team was clear: <em>teach four heterogeneous benches&nbsp;— 5G, LoRa, Mars and GNSS — to run themselves</em>.</p>
+</section>
+
+<!-- ─── Key Achievements ─── -->
+<section>
+  <h2>Key Achievements</h2>
+  <div class="grid two-col">
+    <div class="card">
+      <h3>Automation Framework</h3>
+      <p>Built Python + Tkinter / PyQt GUIs that replaced CLI scripts, added real‑time plots & server archiving, and cut manual test time > 70 %.</p>
+    </div>
+    <div class="card">
+      <h3>5G Bench Revamp</h3>
+      <p>Added TRP mode, spherical scans (ϕ/θ), dynamic EPRE control and CSV + PDF report generation on a CMW500 / chamber rig.</p>
+    </div>
+    <div class="card">
+      <h3>Ground‑Up LoRa Bench</h3>
+      <p>Designed hardware layout, USB‑controlled attenuator logic & PyQt interface for 2 D sensitivity sweeps at 868 / 915 MHz.</p>
+    </div>
+    <div class="card">
+      <h3>Mars Dual‑Mode Tests</h3>
+      <p>Created conducted & radiated setups (anechoic and desktop box) inc. auto RX‑card calibration and 4 Mbps‑based stop criteria.</p>
+    </div>
+    <div class="card">
+      <h3>GNSS Co‑existence Bench</h3>
+      <p>Profiled C/No degradation while toggling video, Wi‑Fi & Mars modules; delivered mitigation guidance to firmware team.</p>
+    </div>
+    <div class="card">
+      <h3>Extra Contributions</h3>
+      <p>Repaired LT360 turntable, calibrated chambers via VNA/SA, and re‑designed a power‑optimised Mars reader PCB in OrCAD.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Tech Stack ─── -->
+<section>
+  <h2>Tools & Stack</h2>
   <ul>
-    <li><strong>Designed & validated</strong> embedded RF hardware for next‑gen drone platforms, ensuring compliance with ETSI/FCC regulations.</li>
-    <li><strong>Created & updated PCB schematics</strong> using OrCAD, iterating with mechanical and firmware teams for seamless integration.</li>
-    <li><strong>Automated measurement workflows</strong> in Python (SCPI) + Bash + ADB, cutting manual test time by > 50 %.</li>
-    <li>Configured and drove advanced instruments: <em>Vector Network Analyzer, Spectrum Analyzer, Rohde & Schwarz CMW500</em>.</li>
-    <li>Documented procedures & trained team members on the new automation framework.</li>
+    <li><strong>Instrumentation:</strong> R&S CMW500, Spectrum Analyzer, Keysight EXG, VNA</li>
+    <li><strong>Control:</strong> SCPI over USB/TCP, ADB, PyVISA, bash</li>
+    <li><strong>Software:</strong> Python 3, Tkinter, PyQt 5, Pandas, Matplotlib, OrCAD, Git</li>
+    <li><strong>Environments:</strong> Full‑size + mini anechoic chambers, LT360 & Maturo turntables</li>
   </ul>
+</section>
 
-  <p class="small">Full details in my downloadable CV and reference letters on request.</p>
+<!-- ─── Timeline ─── -->
+<section>
+  <h2>Internship Timeline</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <h3>Month 1 – On‑boarding & 5G Upgrade</h3>
+      <span>Feb 2025</span>
+      <p>Reverse‑engineered legacy script, added GUI and TRP metrics.</p>
+    </div>
+    <div class="tl-item">
+      <h3>Months 2‑3 – LoRa & Mars Benches</h3>
+      <span>Mar – Apr 2025</span>
+      <p>Built LoRa bench from scratch; initiated Mars dual‑path strategy.</p>
+    </div>
+    <div class="tl-item">
+      <h3>Month 4 – GNSS Interference Study</h3>
+      <span>May 2025</span>
+      <p>Automated C/No measurements under multi‑module load.</p>
+    </div>
+    <div class="tl-item">
+      <h3>Months 5‑6 – Hardware Fixes & Reporting</h3>
+      <span>Jun – Aug 2025</span>
+      <p>Turntable repair, chamber calibration, 47‑page final report delivered.</p>
+    </div>
+  </div>
+</section>
 
-  <a href="index.html" class="btn-back">← Back to main site</a>
+<!-- ─── Back button ─── -->
+<section style="text-align:center">
+  <a href="index.html" class="btn">← Back to main site</a>
+</section>
+
 </main>
 
 <footer>
