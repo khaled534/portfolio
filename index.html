@@ -15,7 +15,7 @@
     --text:#f1f5f9; --primary:#3b82f6; --accent:#facc15;
     --radius:.8rem; --max:1150px; --tr:.3s ease-in-out;
   }
-  body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;scroll-behavior:smooth;}
   a{color:var(--primary);text-decoration:none;transition:var(--tr)}
   a:hover{color:var(--accent)}
 
@@ -222,24 +222,25 @@
   const menuBtn  = document.getElementById('menu-btn');
   const navLinks = document.getElementById('nav-links');
 
-  // open / close when the hamburger itself is tapped
+  /* open / close hamburger */
   menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('open');
     navLinks.classList.toggle('show');
     menuBtn.setAttribute('aria-expanded', navLinks.classList.contains('show'));
   });
 
-  /* NEW 👉 close menu when any nav <a> is clicked */
+  /* CLOSE menu when any nav link is clicked */
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       if (navLinks.classList.contains('show')) {
         navLinks.classList.remove('show');
         menuBtn.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-expanded','false');
       }
     });
   });
 </script>
+
 
 </body>
 </html>
