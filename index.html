@@ -77,6 +77,10 @@
 
   /* ─── FOOTER ───────────────────────────────── */
   footer{text-align:center;padding:2rem 1rem;background:#0e1628;font-size:.85rem}
+  @media(max-width:500px){
+    blockquote{font-size:.9rem}
+  }
+
 </style>
 </head>
 <body>
@@ -97,6 +101,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#thanks">Thanks</a></li>   
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -232,9 +237,58 @@
     </a>
   </div>
 </section>
+<!-- ────────── GRATITUDE ────────── -->
+<section id="thanks">
+  <h2>Gratitude</h2>
+
+  <blockquote style="border-left:4px solid var(--accent);padding:1rem 1.2rem;
+                     background:var(--bg-alt);border-radius:var(--radius);margin-bottom:2.2rem;
+                     font-style:italic;opacity:.9">
+    “If I have seen further, it is by standing on the shoulders of giants.”
+  </blockquote>
+
+  <div class="grid two">
+    <div class="card">
+      <h3>University Mentors</h3>
+      <p>
+        To every professor at <strong>Sorbonne University</strong>, 
+        <strong>Lille University</strong>, and <strong>IGEE (INELEC)</strong> who
+        turned complex equations into crystal‑clear insights 🙏
+        thank you for sparking my curiosity and guiding my research spirit.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Parrot Internship Tutors</h3>
+      <p>
+        Gratitude to the RF & Antenna team at <strong>Parrot Drones</strong> for their patience, 
+        trust, and for letting me break (and then fix) expensive equipment while learning.  
+        Your mix of rigor and creativity shaped the engineer I’m becoming.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Lab & Project Partners</h3>
+      <p>
+        To the friends who stayed late in anechoic chambers, debugged BeagleBone kernels,
+        or drew antennas on café napkins 😊 your collaboration made every challenge fun.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Family & Scouts</h3>
+      <p>
+        Thanks to my family for unconditional support and to my scouting leaders
+        for teaching resilience, leadership, and how to make a campfire
+        (skills surprisingly handy in RF field tests!).
+      </p>
+    </div>
+  </div>
+</section>
 
 
-<!-- ────────── CONTACT (unchanged) ────────── -->
+
+<!-- ────────── CONTACT ────────── -->
 <section id="contact">
   <h2>Contact</h2>
   <p>📧 <a href="mailto:douadikhaled71@gmail.com">douadikhaled71@gmail.com</a></p>
