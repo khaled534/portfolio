@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stage Parrot – Khaled Douadi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Le même CSS que la version anglaise -->
+<style>
+  /* ── Theme ─────────────────────────────────────── */
+  :root{--bg:#0f172a;--bg-alt:#1e293b;--text:#f1f5f9;
+        --primary:#3b82f6;--accent:#facc15;--radius:.8rem;--max:950px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+  a{color:var(--primary);text-decoration:none;transition:.3s}
+  a:hover{color:var(--accent)}
+  h1,h2{font-weight:600}
+  /* ── Layout helpers ───────────────────────────── */
+  header,footer{text-align:center;padding:1.2rem}
+  main{max-width:var(--max);margin:auto;padding:2.5rem 1rem;display:grid;gap:2.5rem}
+  section{display:flex;flex-direction:column;gap:1.2rem}
+  ul{margin-left:1.4rem;display:grid;gap:.4rem}
+  .btn{display:inline-block;padding:.6rem 1.4rem;border:2px solid var(--primary);border-radius:var(--radius);color:var(--text)}
+  .btn:hover{background:var(--primary);color:var(--bg)}
+  /* ── Hero ─────────────────────────────────────── */
+  .hero{background:linear-gradient(145deg,#111827 0%,var(--bg-alt) 100%);padding:3.5rem 1rem;text-align:center;border-radius:var(--radius)}
+  .hero img{max-width:220px;width:55%;height:auto;filter:drop-shadow(0 3px 8px rgba(0,0,0,.4))}
+  .hero h1{margin-top:1rem;font-size:clamp(1.8rem,4.5vw,2.6rem)}
+  .tagline{opacity:.85;font-size:1.05rem;max-width:45ch;margin:0 auto}
+  /* ── Grid cards ───────────────────────────────── */
+  .grid{display:grid;gap:1.6rem}
+  .two-col{grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+  .card{background:var(--bg-alt);padding:1.5rem;border-radius:var(--radius)}
+  .card h3{margin-bottom:.4rem;font-size:1.1rem;color:var(--accent)}
+  /* ── Timeline bullets ─────────────────────────── */
+  .timeline{position:relative;padding-left:2rem}
+  .timeline::before{content:"";position:absolute;left:.55rem;top:0;width:3px;height:100%;background:var(--primary)}
+  .tl-item{position:relative;padding-left:1.4rem;margin-bottom:1.6rem}
+  .tl-item::before{content:"";position:absolute;left:0;top:.6rem;width:.85rem;height:.85rem;border-radius:50%;background:var(--accent);border:2px solid var(--primary)}
+  .tl-item span{opacity:.8;font-size:.9rem}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="btn">← Retour au site principal</a>
+</header>
+
+<!-- ────────── HERO ────────── -->
+<div class="hero">
+  <a href="https://www.parrot.com/en" target="_blank">
+    <img src="parrot_logo.png" alt="Logo Parrot">
+  </a>
+  <h1>Stage Ingénieur RF &nbsp;|&nbsp; Parrot Drones (févr. – août 2025)</h1>
+  <p class="tagline">Automatisation de quatre bancs de test RF et gain de productivité de <strong>70 %</strong> pour les plateformes de drones professionnels nouvelle génération de Parrot.</p>
+</div>
+
+<main>
+
+<!-- ─── Context ─── -->
+<section>
+  <h2>Entreprise & Mission</h2>
+  <p><strong>Parrot</strong> est le premier fabricant européen de drones, fournissant des systèmes ANAFI légers et 4K aux marchés de la défense, de la sécurité publique et de l’inspection. Ma mission de six mois au sein de l’équipe <em>Hardware RF</em> était claire : <em>rendre autonomes quatre bancs hétérogènes — 5G, LoRa, Mars et GNSS</em>.</p>
+</section>
+
+<!-- ─── Key Achievements ─── -->
+<section>
+  <h2>Réalisations clés</h2>
+  <div class="grid two-col">
+    <div class="card">
+      <h3>Cadre d’automatisation</h3>
+      <p>Création d’interfaces Python + Tkinter / PyQt remplaçant les scripts CLI, ajout de graphiques temps réel et d’archivage serveur, réduisant le temps de test manuel de plus de 70 %.</p>
+    </div>
+    <div class="card">
+      <h3>Révision du banc 5G</h3>
+      <p>Ajout du mode TRP, scans sphériques (ϕ/θ), contrôle EPRE dynamique et génération de rapports CSV + PDF sur banc CMW500/chambre.</p>
+    </div>
+    <div class="card">
+      <h3>Banc LoRa construit de zéro</h3>
+      <p>Conception du hardware, logique d’atténuateur USB et interface PyQt pour balayages de sensibilité 2 D à 868/915 MHz.</p>
+    </div>
+    <div class="card">
+      <h3>Tests Mars double mode</h3>
+      <p>Mise en place de configurations conduites & rayonnées (chambre et boîte de bureau) incluant calibration automatique et critère d’arrêt basé sur 4 Mbps.</p>
+    </div>
+    <div class="card">
+      <h3>Banc de coexistence GNSS</h3>
+      <p>Profilage de la dégradation C/No lors de l’activation vidéo, Wi‑Fi & Mars ; recommandations de mitigation pour l’équipe firmware.</p>
+    </div>
+    <div class="card">
+      <h3>Contributions supplémentaires</h3>
+      <p>Réparation du plateau LT360, calibration de chambres via VNA/SA et redesign d’un lecteur Mars optimisé en puissance sous OrCAD.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Tech Stack ─── -->
+<section>
+  <h2>Outils & Technologies</h2>
+  <ul>
+    <li><strong>Instrumentation&nbsp;:</strong> R&S CMW500, analyseur de spectre, Keysight EXG, VNA</li>
+    <li><strong>Contrôle&nbsp;:</strong> SCPI sur USB/TCP, ADB, PyVISA, bash</li>
+    <li><strong>Logiciels&nbsp;:</strong> Python 3, Tkinter, PyQt 5, Pandas, Matplotlib, OrCAD, Git</li>
+    <li><strong>Environnements&nbsp;:</strong> Chambres anéchoïques grande & mini, plateaux LT360 & Maturo</li>
+  </ul>
+</section>
+
+<!-- ─── Timeline ─── -->
+<section>
+  <h2>Chronologie du stage</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <h3>Mois 1 – Intégration & mise à niveau 5G</h3>
+      <span>févr. 2025</span>
+      <p>Rétro‑ingénierie de script legacy, ajout d’une GUI et des métriques TRP.</p>
+    </div>
+    <div class="tl-item">
+      <h3>Mois 2‑3 – Bancs LoRa & Mars</h3>
+      <span>mars – avr. 2025</span>
+      <p>Banc LoRa construit de zéro ; lancement de la stratégie double voie Mars.</p>
+    </div>
+    <div class="tl-item">
+      <h3>Mois 4 – Étude d’interférences GNSS</h3>
+      <span>mai 2025</span>
+      <p>Automatisation des mesures C/No sous charge multi‑module.</p>
+    </div>
+    <div class="tl-item">
+      <h3>Mois 5‑6 – Correctifs matériel & rapports</h3>
+      <span>juin – août 2025</span>
+      <p>Réparation plateau, calibration chambre, rapport final de 47 pages livré.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Back button ─── -->
+<section style="text-align:center">
+  <a href="index.html" class="btn">← Retour au site principal</a>
+</section>
+
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Khaled Douadi
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
